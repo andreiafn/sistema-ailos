@@ -1,0 +1,55 @@
+<div class="main">
+<mat-stepper orientation="horizontal" class="stepper">
+    <mat-step>
+      <ng-template matStepLabel>Início</ng-template>
+    </mat-step>
+    <mat-step>
+      <ng-template matStepLabel>Documentos</ng-template>
+    </mat-step>
+    <mat-step>
+      <ng-template matStepLabel>Dados Cadastrais</ng-template>
+    </mat-step>
+    <mat-step>
+        <ng-template matStepLabel>Admissão</ng-template>
+      </mat-step>
+  </mat-stepper>
+<div class="infos">
+  <h1 class="titulo">Informe o CPF do futuro cooperado (a)</h1>
+  <span class="subtitulo">Se necessário, você poderá duplicar uma conta existente ou pausar e retomar este cadastro futuramente.<br>
+    Digite apenas os números (sem pontos ou traços).
+    </span>
+    <div class="informacoes">
+        <label class="label-cpf">CPF</label>
+        <input class="input-cpf" type="text" name="" id="" mask="000.000.000-00">
+        <button class="consultar-cpf" (click)="consultarCpf()">Consultar por CPF</button>
+    </div>
+    <div *ngIf="cpf">
+        <mat-card class="example-card" >
+            <mat-card-header>
+              <mat-card-title>
+                <span>Situação cadastral do CPF</span>
+            </mat-card-title>
+              <mat-card-subtitle>
+                <span>Consulta na Receita Federal</span>
+            </mat-card-subtitle>
+            </mat-card-header>
+            <mat-card-content>
+                <i class="icone-person"><mat-icon>person</mat-icon>
+                    <span class="nome">Nome</span>
+                    <span class="nome-subtitulo">Mariane de Sousa Oliveira</span>
+                </i>
+            </mat-card-content>
+            <mat-card-content>
+                <i class="icone-check"><mat-icon>check_circle_outline</mat-icon>
+                    <span class="situacao-cpf">Situação do CPF</span>
+                    <span class="situacao-check">Regular</span>
+                </i>
+            </mat-card-content>
+          </mat-card>
+    </div>
+</div>
+<footer class="footer">
+    <button class="iniciar-admissao">Iniciar nova admissão</button>
+    <button class="abertura-conta">Dicas para abertura de conta</button>
+</footer>
+</div>

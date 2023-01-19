@@ -1,0 +1,11 @@
+body {
+    background-color: #e8eff2;
+    margin-bottom: 60px;
+}
+
+app-header{
+    width: 100%;
+    display: flex;
+    margin-left: 8px;
+    top: 0
+}

@@ -1,0 +1,26 @@
+.example-spacer {
+    flex: 1 1 auto;
+    display: flex;
+    width: 100%;
+  }
+  *{
+    background-color: white;
+    
+  }
+  mat-toolbar > div > span {
+    margin-left: 100px;
+  } 
+  .notifications_none{
+    margin-left: 600px;
+    color:#125D79
+  }
+  .viacred{
+    color: #125D79;
+    border: 1px solid #125D79;
+    box-sizing: border-box;
+    border-radius: 15px;
+    margin-left: 5px;
+    margin-bottom: 5px;
+    font-weight: 700;
+
+  }

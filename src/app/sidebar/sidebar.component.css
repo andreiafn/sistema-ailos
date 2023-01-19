@@ -1,0 +1,64 @@
+.sidenav {
+    height: 100%;
+    width: 100px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: #165C7D;
+  }
+  .logo{
+    width: 60px;
+    height: 60px;
+    margin-left: 16px;
+    margin-top: 19px;
+  }
+
+  .search{
+    display: flex;
+    width: 25px;
+    height: 25px;
+    color: #FFFF;
+    margin-left: 35px;
+    margin-top: 29px;
+  }
+  .menu{
+    display: flex;
+    width: 25px;
+    height: 25px;
+    color: #739DB1;
+    margin-left: 35px;
+    margin-top: 29px;
+  }
+  .star_border{
+    display: flex;
+    width: 25px;
+    height: 25px;
+    color: #FFFF;
+    margin-left: 35px;
+    margin-top: 29px;
+  }
+  .chat{
+    display: flex;
+    width: 25px;
+    height: 25px;
+    color: #FFFF;
+    margin-left: 35px;
+    margin-top: 29px;
+  }
+  .tune{
+    display: flex;
+    width: 25px;
+    height: 25px;
+    color: #FFFF;
+    margin-left: 35px;
+    margin-top: 31px;
+  }
+  .account_balance{
+    display: flex;
+    width: 25px;
+    height: 25px;
+    color: #FFFF;
+    margin-left: 35px;
+    margin-top: 33px;
+  }
+  
