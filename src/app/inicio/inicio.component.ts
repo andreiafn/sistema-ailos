@@ -1,6 +1,7 @@
-import { Component } from '@angular/core';
-import {FormBuilder, Validators} from '@angular/forms';
+import { Component, OnInit } from '@angular/core';
 import {STEPPER_GLOBAL_OPTIONS} from '@angular/cdk/stepper';
+import { FormControl, FormGroup, Validators } from '@angular/forms';
+
 
 @Component({
   selector: 'app-inicio',
@@ -13,11 +14,25 @@ import {STEPPER_GLOBAL_OPTIONS} from '@angular/cdk/stepper';
     },
   ],
 })
-export class InicioComponent {
+export class InicioComponent implements OnInit {
   cpf = false;
+  inputCpf!: FormGroup;
+  
   constructor() {}
 
-  consultarCpf():void {
-    this.cpf = true;
+  ngOnInit() {
+    this.inputCpf = new FormGroup({
+      cpfCooperado: new FormControl('', [Validators.required])
+    });
+    }
+    
+    get cpfCooperado(){
+      return this.inputCpf.get('cpfCooperado')!;
+    }
+    consultarCpf():void {
+      if(this.cpfCooperado.invalid){
+        return;
+      } else this.cpf = true;
   }
+
 }

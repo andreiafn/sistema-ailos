@@ -18,11 +18,16 @@
   <span class="subtitulo">Se necessário, você poderá duplicar uma conta existente ou pausar e retomar este cadastro futuramente.<br>
     Digite apenas os números (sem pontos ou traços).
     </span>
-    <div class="informacoes">
+    <form (submit)="consultarCpf()" [formGroup]="inputCpf" #formDir="ngForm">
+    <div class="form-group informacoes">
         <label class="label-cpf">CPF</label>
-        <input class="input-cpf" type="text" name="" id="" mask="000.000.000-00">
+          <input class="input-cpf" type="string" formControlName="cpfCooperado" name="cpfCooperado" id="cpfCooperado" required mask="000.000.000-00">
         <button class="consultar-cpf" (click)="consultarCpf()">Consultar por CPF</button>
     </div>
+    <div *ngIf="cpfCooperado.invalid && formDir.submitted" class="validation-error">
+      <p *ngIf="cpfCooperado.errors?.['required']">O CPF é obrigatório.</p>
+    </div>
+    </form>
     <div *ngIf="cpf">
         <mat-card class="example-card" >
             <mat-card-header>

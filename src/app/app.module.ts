@@ -16,6 +16,8 @@ import {NgxMaskDirective, provideNgxMask} from 'ngx-mask'
 import {MatSidenavModule} from '@angular/material/sidenav';
 import {MatListModule} from '@angular/material/list';
 import { SidebarComponent } from './sidebar/sidebar.component';
+import { ReactiveFormsModule } from '@angular/forms';
+
 
 @NgModule({
   declarations: [
@@ -36,7 +38,8 @@ import { SidebarComponent } from './sidebar/sidebar.component';
     MatCardModule,
     NgxMaskDirective,
     MatSidenavModule,
-    MatListModule
+    MatListModule,
+    ReactiveFormsModule
   ],
   providers: [provideNgxMask()],
   bootstrap: [AppComponent]

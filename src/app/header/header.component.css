@@ -11,16 +11,19 @@
     margin-left: 100px;
   } 
   .notifications_none{
-    margin-left: 600px;
+    position: absolute;
+    right: 180px;
     color:#125D79
   }
   .viacred{
+    display: flex;
+    position: absolute;
     color: #125D79;
     border: 1px solid #125D79;
     box-sizing: border-box;
     border-radius: 15px;
-    margin-left: 5px;
+    right: 85px;
     margin-bottom: 5px;
     font-weight: 700;
-
+    text-align: left;
   }
